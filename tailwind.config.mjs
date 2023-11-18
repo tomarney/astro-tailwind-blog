@@ -1,9 +1,32 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {},
-	},
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+module.exports = {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    screens: {
+      'xs': '425px',
+      ...defaultTheme.screens,
+    },
+    fontFamily: {
+      'sans': ['Atkinson', ...defaultTheme.fontFamily.sans],
+    },
+    extend: {
+      width: {
+        'underfull': 'calc(100% - 1rem)',
+      },
+      colors: {
+        primary: {
+          light: '#33BBBB',
+          DEFAULT: '#339999',
+          dark: '#227777'
+        },
+        black: {
+          DEFAULT: '#111111'
+        },
+      },
+    },
+  },
 	plugins: [
 		require('@tailwindcss/typography'),
 	],
