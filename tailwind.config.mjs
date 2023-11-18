@@ -10,6 +10,7 @@ module.exports = {
     },
     fontFamily: {
       'sans': ['Atkinson', ...defaultTheme.fontFamily.sans],
+      ...defaultTheme.fontFamily
     },
     extend: {
       width: {
