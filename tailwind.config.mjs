@@ -9,7 +9,7 @@ module.exports = {
       ...defaultTheme.screens,
     },
     fontFamily: {
-      'sans': ['Atkinson', ...defaultTheme.fontFamily.sans],
+      'sans': ['Roboto', ...defaultTheme.fontFamily.sans],
       ...defaultTheme.fontFamily
     },
     extend: {
